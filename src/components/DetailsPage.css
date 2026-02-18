@@ -1,0 +1,150 @@
+/* DetailsPage.css */
+
+.details-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Back Button Styling */
+.back-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Main Layout: Flexbox for Desktop */
+.details-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Section */
+.details-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.large-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.large-image:hover {
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Info Section */
+.details-info-section {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details-info-section h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin: 0;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: #b12704; /* Amazon-style red/brown price */
+  font-weight: bold;
+}
+
+.description-box h3, .features-box h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #eee;
+  display: inline-block;
+}
+
+.description-box p {
+  line-height: 1.6;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Features List */
+.extra-features {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.extra-features li {
+  margin-bottom: 10px;
+  position: relative;
+  color: #444;
+}
+
+.extra-features li::before {
+  content: "✓";
+  color: #28a745;
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
+}
+
+/* Buy Button */
+.buy-btn {
+  background-color: #ff9900; /* Vibrant Orange */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.3s ease, transform 0.1s active;
+}
+
+.buy-btn:hover {
+  background-color: #e68a00;
+}
+
+.buy-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 850px) {
+  .details-content {
+    flex-direction: column; /* Stack vertically on small screens */
+  }
+
+  .details-image-section {
+    width: 100%;
+  }
+
+  .details-info-section h1 {
+    font-size: 1.8rem;
+  }
+}
